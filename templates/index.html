@@ -1,9 +1,57 @@
-<h2>Welcome to DAPP - Store and Transfer Money</h2>
-<br>
-<form action = "/store_money" method="post">
-    <input type="submit" value="Store Money">
-</form>
-<br>
-<form action = "/transfer_money" method="post">
-    <input type="submit" value="Transfer Money">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAPP - Store and Transfer Money</title>
+    <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        .btn-custom {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to DAPP</h2>
+        <p class="text-center">Store and Transfer Money</p>
+        <form action="/store_money" method="post">
+            <input type="submit" value="Store Money" class="btn-custom">
+        </form>
+        <form action="/transfer_money" method="post">
+            <input type="submit" value="Transfer Money" class="btn-custom">
+        </form>
+    </div>
+</body>
+</html>

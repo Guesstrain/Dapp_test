@@ -1,17 +1,79 @@
-<h2>Welcome to transfer money v1</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Money v1</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 500px;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #343a40;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+        p {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
 
-<input type="text" id="payer_id"  placeholder="Please enter payer address">
-<br><br>
-<input type="text" id="payee_id"  placeholder="Please enter payee address">
-<br><br>
-<input type="number" id="amount_id"  placeholder="Please enter amount">
-<br><br>
-<button class="btn" onclick="transfer()">Trasfer Money</button>
-<br><br>
-<button class="btn" onclick="view_transaction()">View Transaction</button>
-<p id="view_payer_id"></p>
-<p id="view_payee_id"></p>
-<p id="view_amount_id"></p>
+<div class="container">
+    <h2>Welcome to Transfer Money v1</h2>
+    
+    <div class="form-group">
+        <input type="text" class="form-control" id="payer_id" placeholder="Please enter payer address">
+    </div>
+    
+    <div class="form-group">
+        <input type="text" class="form-control" id="payee_id" placeholder="Please enter payee address">
+    </div>
+    
+    <div class="form-group">
+        <input type="number" class="form-control" id="amount_id" placeholder="Please enter amount">
+    </div>
+    
+    <button class="btn btn-primary" onclick="transfer()">Transfer Money</button>
+    <br><br>
+    <button class="btn btn-primary" onclick="view_transaction()">View Transaction</button>
+    
+    <p id="view_payer_id"></p>
+    <p id="view_payee_id"></p>
+    <p id="view_amount_id"></p>
+    
+    <form action="/" method="post">
+        <input type="submit" class="btn btn-outline-secondary btn-block" value="Main">
+    </form>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
 
 
 <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
